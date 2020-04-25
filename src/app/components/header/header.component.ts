@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  rorunLogo = 'assets/home/rorun_logo.jpg'
+  fbLogo = 'assets/home/Facebook_Icon.jpg'
+
+
   constructor() { }
 
   ngOnInit(): void {

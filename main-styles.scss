@@ -1,4 +1,5 @@
-$primary-color: rgb(114, 113, 113);
+$primary-color: rgb(7, 179, 113);
+$secondary-color: rgb(114, 113, 113);
 
 
 $primary-font-family: 'Open sans', sans-serif;
@@ -7,4 +8,5 @@ $primary-font-family: 'Open sans', sans-serif;
 .is-container{
   width: 80%;
   max-width: 1200px;
+  margin: 0 auto;
 }

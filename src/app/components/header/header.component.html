@@ -1,1 +1,24 @@
-<p>header works!</p>
+<header class="header" id="header">
+  <div class="is-container">
+    <img class="header__logo" [src]="rorunLogo">
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item"><a routerLinkActive="navigation__link--active" routerLink="/home"
+                                        class="navigation__link">Home</a></li>
+        <li class="navigation__item"><a routerLinkActive="navigation__link--active" routerLink="/about-us"
+                                        class="navigation__link">O nas</a></li>
+        <li class="navigation__item"><a routerLinkActive="navigation__link--active" routerLink="/news"
+                                        class="navigation__link">Aktualności</a></li>
+        <li class="navigation__item"><a routerLinkActive="navigation__link--active" routerLink="/contact"
+                                        class="navigation__link">Kontakt</a></li>
+        <li class="navigation__item"><a href="#" target="_blank" class="navigation__link"><img [src]="fbLogo"
+                                                                                               alt="logo facebook"></a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="mobile-btn">
+      <span class="mobile-btn__line mobile-btn__line--is-open"></span>
+    </div>
+  </div>
+</header>

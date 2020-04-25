@@ -8,6 +8,9 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { NewsComponent } from './pages/news/news.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NewsChosenComponent } from './pages/news-chosen/news-chosen.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { NewsChosenComponent } from './pages/news-chosen/news-chosen.component';
     NewsComponent,
     ContactComponent,
     NewsChosenComponent,
+    HeaderComponent,
+    FooterComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,

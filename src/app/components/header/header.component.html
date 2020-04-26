@@ -1,7 +1,7 @@
-<header class="header" id="header">
+<header class="header" id="header" #header>
   <div class="is-container">
-    <img class="header__logo" [src]="rorunLogo">
-    <nav class="navigation">
+    <img class="header__logo" [src]="rorunLogo" alt="logo">
+    <nav class="navigation" [class.navigation--is-open]="isMobileMenuOpen" #nav>
       <ul class="navigation__list">
         <li class="navigation__item"><a routerLinkActive="navigation__link--active" routerLink="/home"
                                         class="navigation__link">Home</a></li>
@@ -17,8 +17,8 @@
       </ul>
     </nav>
 
-    <div class="mobile-btn">
-      <span class="mobile-btn__line mobile-btn__line--is-open"></span>
+    <div class="mobile-btn" (click)="onToggleMobileMenu()">
+      <span class="mobile-btn__line" [class.mobile-btn__line--is-open]="isMobileMenuOpen"></span>
     </div>
   </div>
 </header>

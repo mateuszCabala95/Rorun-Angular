@@ -1,14 +1,16 @@
 @import "main-styles";
 
 .header {
-  position: relative;
+  box-shadow: 0 0 10px $primary-color;
 
   &__logo {
     width: 25%;
     height: 50%;
+    margin: 25px 0;
   }
 }
-.is-container{
+
+.is-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +26,7 @@
 
   z-index: 10;
 
-  &--is-open{
+  &--is-open {
     top: 0;
   }
 
@@ -39,17 +41,16 @@
   &__item {
     display: block;
     width: 100%;
-    padding: 15px 0;
+    padding: 10px 0;
 
-    //background-color: white;
-    background-color: rgba(255,255,255, 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
   }
 
   &__link {
     display: block;
-    width: 100%;
-    padding: 7px;
-
+    width: 60%;
+    padding: 12px;
+    margin: 0 auto;
     text-align: center;
 
     font-family: $primary-font-family;
@@ -57,70 +58,97 @@
     color: $primary-color;
   }
 
-  &__link:hover,&__link:active {
-    transform: scale(0.8);
+  &__link:hover, &__link:active {
+    text-decoration: underline;
   }
 
-  &__link--active{
+  &__link--active {
     font-weight: bold;
   }
 }
 
 
-.mobile-btn{
+.mobile-btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
 
-  margin: 25px 0;
+  overflow: hidden;
 
-  &__line{
+  position: relative;
+  z-index: 20;
+
+  &__line {
     position: relative;
-    display: block;
-    width: 45px;
-    height: 2px;
+    width: 100%;
+    height: 5px;
     background-color: $primary-color;
-
-    margin: 0 0 10px auto;
-    z-index: 20;
 
     transition: 0.25s;
   }
-  &__line::before,&__line::after{
+
+  &__line:before {
+    position: absolute;
+    top: -15px;
     content: "";
     display: block;
-    width: 45px;
-    height: 2px;
+    width: 100%;
+    height: 5px;
+
+    background-color: $primary-color;
+
+  }
+
+  &__line:after {
+    position: absolute;
+    bottom: -15px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
     background-color: $primary-color;
   }
 
-  &__line::before{
-    transform: translateY(-12px);
-  }
-
-  &__line::after{
-    transform: translateY(10px);
-  }
-
-  &__line--is-open{
-//display: none;
-//    opacity: 0;
-
+  .mobile-btn__line--is-open.mobile-btn__line {
+    //transform: translateX(45px);
     background-color: transparent;
-
-    transition: 0.25s;
-  }
-  &__line--is-open::before,&__line--is-open::after{
-
-    content: "";
-    display: block;
-    width: 45px;
-
-    background-color: $primary-color;
   }
 
-  &__line--is-open::before{
-    transform: translateY(5px) rotate(45deg);
+  .mobile-btn__line--is-open.mobile-btn__line:after {
+    top: 0;
+    transform: rotate(45deg);
   }
 
-  &__line--is-open::after{
-    transform: translateY(3px) rotate(-45deg) ;
+  .mobile-btn__line--is-open.mobile-btn__line:before {
+    top: 0;
+    transform: rotate(-45deg);
   }
+
+
+}
+
+
+@media screen and (min-width: 1200px) {
+.header .is-container{
+  display: flex;
+}
+
+  .navigation{
+    position: static;
+    font-size: 1.2em;
+
+    &__list{
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+
+
+
+  .mobile-btn{
+    display: none;
+  }
+
 }

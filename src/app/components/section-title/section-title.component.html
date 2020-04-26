@@ -1,1 +1,12 @@
-<p>section-title works!</p>
+<div class="is-container">
+  <div class="header" >
+    <h2 class="header__main" [class.header__main--reverse-color]="reverseColors">{{header}}</h2>
+    <h3 class="header__sub-header" [class.header__sub-header--reverse-color]="reverseColors">{{subHeader}}</h3>
+
+    <p *ngIf="extraDescription" class="header__description">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+      Ad consequuntur dolore doloremque ,
+      dolorum ea ipsam laborum minus natus, numquam pariatur possimus qui quod sapiente voluptas!
+    </p>
+  </div>
+</div>

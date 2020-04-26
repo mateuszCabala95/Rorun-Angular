@@ -1,0 +1,61 @@
+@import "main-styles";
+.header{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  font-family: $primary-font-family;
+
+  &__main{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+  }
+  &__main--reverse-color {
+    color: white;
+  }
+
+  &__sub-header{
+    width: 100%;
+    color: $secondary-color;
+    text-align: center;
+  }
+  &__sub-header--reverse-color{
+    color: white;
+  }
+
+  &__sub-header:after{
+    content:"";
+    display: block;
+    width: 25%;
+    height: 2px;
+    background-color: $secondary-color;
+    margin: 25px auto;
+  }
+
+
+    &__description{
+      width: 60%;
+      font-size: 0.75em;
+    text-align: center;
+      color: darkgrey;
+  }
+
+}
+
+
+@media screen and (min-width: 768px){
+  .header{
+    &__main{
+      font-size: 2em;
+    }
+
+    &__sub-header{
+      font-size: 1.5em;
+    }
+    &__description {
+      font-size: 1.25em;
+      line-height: 1.2em;
+    }
+  }
+}

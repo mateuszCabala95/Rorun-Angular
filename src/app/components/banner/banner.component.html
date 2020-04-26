@@ -1,1 +1,18 @@
-<p>banner works!</p>
+<div class="banner" [ngStyle]="{'background-image':'url('+backgroundImagePath+')'}">
+  <div class="is-container">
+    <div class="banner__empty-space"></div>
+    <h2 class="banner__header">
+      <span class="banner__container">{{header}}</span>
+    </h2>
+    <h3 class="banner__sub-header">
+      <span class="banner__container">{{subHeader}}</span>
+    </h3>
+    <p class="banner__description">
+      <span class="banner__container">'Rorun to bezpłatna aplikacja i strona internetowa,<br> która bawii motywuje do uprawiania sportu'</span>
+    </p>
+
+    <p class="banner__site">
+      <span class="banner__container">www.rorun.com</span>
+    </p>
+  </div>
+</div>

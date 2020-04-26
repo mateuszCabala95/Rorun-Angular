@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  arrowPath  ='assets/home/up_arrow.png';
+  facebookPath = 'assets/home/Facebook_Icon2.png'
+
+onScrollToTop = ()=>{
+  window.scrollTo(0,0);
+}
   constructor() { }
 
   ngOnInit(): void {

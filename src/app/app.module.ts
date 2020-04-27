@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { SectionTitleComponent } from './components/section-title/section-title.component';
+import { HeroBannerComponent } from './components/hero-banner/hero-banner.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SectionTitleComponent } from './components/section-title/section-title.
     FooterComponent,
     BannerComponent,
     SectionTitleComponent,
+    HeroBannerComponent,
   ],
   imports: [
     BrowserModule,

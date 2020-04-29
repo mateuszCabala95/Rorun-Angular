@@ -1,0 +1,126 @@
+@import "main-styles";
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  margin-top: 25px;
+
+  font-family: $primary-font-family;
+}
+
+.feature {
+  max-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+
+  p {
+    text-align: center;
+  }
+}
+
+.background-container {
+  background-color: lightgrey;
+}
+
+.is-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+
+
+  .number {
+    width: 100%;
+    max-width: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 25px 15px;
+
+    span:nth-of-type(1) {
+      font-size: 4em;
+      color: $primary-color;
+
+      font-weight: bold;
+    }
+
+    span {
+      color: darkgrey;
+    }
+  }
+}
+
+
+
+.cooperation{
+  background-color: $primary-color;
+
+  app-section-title{
+    width: 100%;
+  }
+
+
+  .companies{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px 0;
+
+
+    img{
+      padding: 0 15px;
+      margin: 25px auto;
+    }
+  }
+}
+
+.is-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .props{
+    max-width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+
+
+    margin: 25px;
+
+    h3{
+      width: 100%;
+      font-weight: 300;
+      text-align: center;
+
+      span{
+        color: $primary-color;
+      }
+    }
+
+    h3:after{
+      content: "";
+      display: block;
+      width: 50%;
+      height: 1px;
+      background-color: $secondary-color;
+      margin: 15px auto 0;
+    }
+
+p{
+  margin: 15px;
+  text-align: center;
+  font-weight: 300;
+}
+  }
+}
+

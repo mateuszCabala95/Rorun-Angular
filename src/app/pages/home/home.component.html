@@ -109,3 +109,33 @@
   ></app-hero-banner>
 
 </section>
+
+<section class="watch-us">
+  <app-section-title
+    header="Zobacz co u nas słychać"
+    subHeader="i jacy jesteśmy fajni"
+  ></app-section-title>
+
+  <div class="bg-container">
+    <div class="triangle"></div>
+    <div class="is-container">
+<ng-container *ngFor="let photo of photoCards">
+  <app-photo-card [photo]="photo.image" [name]="photo.name" [subtitle]="photo.date.toLocaleDateString()"></app-photo-card>
+</ng-container>
+
+    </div>
+    <button routerLink="/news">wszystkie aktualności</button>
+  </div>
+</section>
+
+
+<section class="contact">
+  <app-section-title
+    header="Kontakt"
+  subHeader="skontaktuj się osobiście lub za pomocą formularza"
+  ></app-section-title>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.2155618835523!2d19.95385341533412!3d50.04479307942148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b457529bc83%3A0xe35dd14768727664!2sBoles%C5%82awa%20Limanowskiego%2036%2C%2033-332%20Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1588360127657!5m2!1spl!2spl" aria-hidden="false"></iframe>
+
+  <app-contact-form></app-contact-form>
+</section>

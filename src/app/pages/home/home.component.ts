@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FeatureModel} from "../../models/Feature.model";
-import {HomePageFeatures} from "./mock.data";
-
+import {HomePageFeatures, News} from "./mock.data";
+import { NguCarouselConfig} from "@ngu/carousel";
 
 @Component({
   selector: 'app-home',
@@ -11,6 +11,7 @@ import {HomePageFeatures} from "./mock.data";
 export class HomeComponent implements OnInit {
 
   features:Array<FeatureModel> = HomePageFeatures;
+  photoCards = News
 
 
   constructor() { }

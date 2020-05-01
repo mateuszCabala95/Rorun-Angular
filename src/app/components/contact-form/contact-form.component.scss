@@ -1,0 +1,86 @@
+@import "main-styles";
+
+form{
+  margin: 25px auto;
+
+  .row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 5px 0;
+
+    input, textarea{
+      order: 2;
+      width: 100%;
+      margin: 5px 0;
+    }
+
+    p{
+      margin: 0;
+      color: $primary-color;
+    }
+  }
+
+  label,p{
+    font-family: $primary-font-family;
+    font-size: 0.8em;
+  }
+
+
+  button{
+    font-family: $primary-font-family;
+    margin-right: auto;
+    width: 33%;
+    max-width: 600px;
+    background-color: $primary-color;
+    color: white;
+    cursor: pointer;
+  }
+
+  button:active{
+    box-shadow: 0 0 5px rgba(0,0,0,0.75);
+  }
+
+  button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+
+@media screen and (min-width: 768px){
+  label,p{
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 1200px){
+  label,p{
+    font-size: 1.2em;
+  }
+}
+
+
+.invalid:not(form){
+animation: blinking-border infinite 1s ease;
+}
+
+@keyframes blinking-border {
+0%{
+border: 1px solid rgba(255, 0, 0, 0.5);
+  box-shadow: 0 0 0 rgba(255,0,0);
+}
+
+ 50%{
+   border: 1px solid rgba(255, 0, 0, 1);
+   box-shadow: 0 0 5px rgba(255,0,0);
+ }
+
+  100%{
+
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 0 rgba(255,0,0);
+
+  }
+}

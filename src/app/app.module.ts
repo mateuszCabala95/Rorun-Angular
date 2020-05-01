@@ -39,7 +39,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

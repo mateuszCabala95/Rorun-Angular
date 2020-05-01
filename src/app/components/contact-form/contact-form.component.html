@@ -1,0 +1,31 @@
+<form class="is-container" (ngSubmit)="onSubmit()" #formContact="ngForm">
+
+  <div class="row">
+    <label for="name">Your name</label>
+    <input type="text" name="name" id="name"  required ngModel [class.invalid]="!formContact.value">
+    <p>wymagane</p>
+  </div>
+
+  <div class="row">
+    <label for="email">Your email</label>
+    <input type="email"  name="email" id="email" required email ngModel [class.invalid]="formContact.invalid && (formContact.dirty || formContact.touched)">
+    <p>wymagane</p>
+  </div>
+
+  <div class="row">
+    <label for="subject">Subject</label>
+    <input type="text" name="subject" id="subject" ngModel>
+  </div>
+
+  <div class="row">
+    <label for="textarea">Message</label>
+    <textarea name="message"  id="textarea" cols="30" rows="10" required ngModel [class.invalid]="formContact.invalid && (formContact.dirty || formContact.touched)"></textarea>
+    <p>wymagane</p>
+  </div>
+
+  <button
+    type="submit"
+  [disabled]="!formContact.valid"
+  >wyślij</button>
+</form>
+

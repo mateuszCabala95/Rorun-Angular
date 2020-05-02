@@ -1,32 +1,38 @@
-export const TeamMember = [
+export const News = [
   {
-    photo:'assets/about_us/team1.jpg',
+    id:'1',
+    photo:'assets/news/news1.jpg',
     name:'Jonathan Doe',
-    subtitle:'CEO'
+    date : new Date(2018, 3, 28)
   },
   {
-    photo:'assets/about_us/team2.jpg',
+    id:'2',
+    photo:'assets/news/news2.jpg',
     name:'Jaden Doe',
-    subtitle:'UX'
+    date : new Date(2018, 3, 28)
   },
   {
-    photo:'assets/about_us/team3.jpg',
+    id:'3',
+    photo:'assets/news/news3.jpg',
     name:'Mister Doe',
-    subtitle:'UI'
+    date : new Date(2018, 3, 28)
   },
   {
-    photo:'assets/about_us/team4.jpg',
+    id:'4',
+    photo:'assets/news/news4.jpg',
     name:'Jonathan Doe',
-    subtitle:'CEO'
+    date : new Date(2018, 3, 28)
   },
   {
-    photo:'assets/about_us/team5.jpg',
+    id:'5',
+    photo:'assets/news/news5.jpg',
     name:'Jaden Doe',
-    subtitle:'UX'
+    date : new Date(2018, 3, 28)
   },
   {
-    photo:'assets/about_us/team6.jpg',
-    name:'Miss Doe',
-    subtitle:'UI'
-  }
+    id:'6',
+    photo:'assets/news/news6.jpg',
+    name:'Mister Doe',
+    date : new Date(2018, 3, 28)
+  },
 ]

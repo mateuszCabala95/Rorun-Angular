@@ -1,0 +1,54 @@
+@import "main-styles";
+
+.is-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  a {
+    text-decoration: none;
+  }
+
+
+  button {
+    width: 100%;
+    max-width: 250px;
+
+    margin: 0 auto 25px;
+    padding: 10px 5px;
+
+    background-color: $primary-color;
+    color: white;
+
+    font-family: $primary-font-family;
+    font-size: 1.3em;
+
+    border: none;
+
+    cursor: pointer;
+  }
+
+  button:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+  }
+
+  .more-data {
+    display: flex;
+    flex-wrap: wrap;
+    transition: 0.25s;
+    justify-content: space-between;
+
+  }
+
+  .is-hidden {
+    display: none;
+    transition: 0.25s;
+  }
+
+
+}
+
+app-photo-card {
+  color: black;
+
+}

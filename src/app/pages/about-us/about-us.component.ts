@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {TeamMember} from "../news/mock.data";
+import {TeamMember} from "./mock.data";
 
 @Component({
   selector: 'app-about-us',

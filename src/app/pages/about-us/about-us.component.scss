@@ -1,0 +1,164 @@
+@import "main-styles";
+
+.rorun-app {
+  .is-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    text-align: left;
+    font-weight: 100;
+    color: dimgray;
+  }
+
+  .info-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+    p {
+      width: 100%;
+      font-family: $primary-font-family;
+
+      text-align: center;
+
+
+      span {
+        font-size: 2em;
+        font-weight: bold;
+        color: $primary-color;
+        padding-right: 5px;
+      }
+
+    }
+  }
+}
+.phone-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    .phone {
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+
+      p {
+        text-align: center;
+
+        span {
+          color: $primary-color;
+        }
+      }
+
+      p:after {
+        display: block;
+        content: "";
+        width: 25%;
+        margin: 15px auto;
+        height: 1px;
+        background-color: grey;
+      }
+    }
+  }
+
+
+.team{
+  .bg-container{
+    position: relative;
+    background-color: lightgrey;
+    margin-top: 50px;
+  }
+
+
+  .triangle{
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid lightgrey;
+
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .is-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    p{
+      margin: 50px 0;
+      line-height: 1.6em;
+      color: grey;
+    }
+  }
+
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  .rorun-app {
+    img {
+      width: 50%;
+      max-width: 400px;
+    }
+
+    .info-container {
+      width: 50%;
+
+      p {
+        font-size: 1.3em;
+
+        span {
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+  .phone-container {
+
+    .phone {
+      width: 50%;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .rorun-app {
+
+    .info-container {
+      p {
+        font-size: 2em;
+
+        span {
+          padding-right: 25px;
+        }
+      }
+    }
+  }
+  .phone-container {
+
+    .phone {
+      width: 33%;
+    }
+
+  }
+}

@@ -1,1 +1,83 @@
-<p>about-us works!</p>
+<app-banner backgroundImagePath="assets/about_us/background_image.jpg" header="o nas"
+            subHeader="i naszej aplikacji"></app-banner>
+<section class="rorun-app">
+  <app-section-title header="Rorun" subHeader="czym jest aplikacja?" [extraDescription]="true"></app-section-title>
+  <div class="is-container">
+    <img src="assets/about_us/img_1.jpg" alt="">
+
+    <div class="info-container">
+      <p><span>4085</span> kroków dzisiaj</p>
+      <p><span>102</span> średnie tętno</p>
+      <p><span>970</span> spalonych kalorii</p>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem culpa debitis dolor doloribus dolorum hic
+      ipsum itaque libero modi mollitia nam, necessitatibus, nemo neque non nulla odit pariatur placeat provident quam
+      quibusdam quidem quisquam rem repellat saepe, sit voluptatem! Ab animi, aperiam assumenda culpa doloremque ea
+      exercitationem expedita facere harum illum itaque, modi nam sapiente sit temporibus unde vel veritatis. Alias est
+      minima molestias tempora voluptatibus. A asperiores cumque est ex, inventore maxime necessitatibus nemo neque
+      perspiciatis placeat praesentium provident quas quis quo reprehenderit similique soluta veniam vitae. Ab autem
+      cumque delectus dolore ducimus ea excepturi, expedita facilis modi molestiae nihil quae repellendus repudiandae
+      sunt voluptatem! Ab alias deserunt, facere molestias nam numquam quasi similique ut? A amet asperiores, beatae,
+      commodi doloribus laborum mollitia natus nesciunt nisi, nobis odio praesentium quas ut! Blanditiis consequuntur
+      esse harum ipsam iste nemo officiis rerum sequi veniam. Deleniti distinctio inventore minima natus neque qui
+      ratione recusandae sapiente veritatis voluptatem! Amet aperiam aspernatur atque consequuntur dicta dolorem
+      eligendi est harum id ipsum molestiae necessitatibus nemo, neque nesciunt nisi odio provident quas qui quidem
+      repellendus reprehenderit saepe suscipit tenetur veritatis, vitae, voluptatem voluptates! A accusamus aliquid
+      consequuntur cumque deleniti, deserunt dolor dolorum eius esse et expedita explicabo id illo incidunt ipsa ipsam
+      iste labore molestiae molestias necessitatibus nulla obcaecati, officia perferendis placeat porro quaerat quam
+      quos repudiandae saepe, ut velit vero voluptas voluptates? Asperiores at commodi, dolore dolorem doloribus ducimus
+      eum ex ipsam iure, maxime mollitia nobis officia officiis praesentium quaerat quidem quo ratione reiciendis
+      reprehenderit sapiente soluta sunt velit! Asperiores atque autem blanditiis cum cumque cupiditate dolor ducimus
+      eaque esse, eum ex exercitationem hic id inventore iste laboriosam necessitatibus nostrum, omnis porro quibusdam
+      recusandae reiciendis soluta tempore tenetur vitae. Aliquid, beatae cum dicta harum magnam non obcaecati officia
+      saepe sit soluta velit veritatis voluptates.</p>
+
+
+    <div class="phone-container">
+      <div class="phone">
+        <p>Dictum tincidunt <span>diam</span></p>
+        <img src="assets/about_us/img_2.jpg" alt="">
+      </div>
+      <div class="phone">
+        <p>Dictum tincidunt <span>diam</span></p>
+        <img src="assets/about_us/img_3.jpg" alt="">
+      </div>
+      <div class="phone">
+        <p>Dictum tincidunt <span>diam</span></p>
+        <img src="assets/about_us/img_4.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="team">
+  <app-section-title
+  header="Nasz zespół"
+  subHeader="Lorem ipsum"
+  ></app-section-title>
+
+
+  <div class="bg-container">
+    <div class="triangle"></div>
+    <div class="is-container">
+<ng-container *ngFor="let member of teamMember">
+      <app-photo-card [photo]="member.photo" [name]="member.name" [subtitle]="member.subtitle"></app-photo-card>
+</ng-container>
+    </div>
+  </div>
+
+  <div class="is-container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis et, fugiat nostrum omnis perferendis perspiciatis provident similique vel! Ad alias aliquam aliquid amet aperiam atque beatae consequuntur excepturi explicabo magni mollitia numquam optio, placeat quas quidem sapiente totam voluptates? Blanditiis doloremque facere maxime molestiae rem sequi vel. Accusamus atque aut cum dolor enim error facilis inventore iusto labore mollitia odio pariatur perspiciatis qui quia quibusdam repellendus, rerum sapiente sunt vero vitae. Atque culpa dolores dolorum ducimus eius fugit ipsam necessitatibus officia optio pariatur praesentium ratione, tenetur totam. Ad alias aliquid aspernatur deleniti dicta, doloremque dolores eos est ex explicabo fugit harum hic illum in labore maxime, natus nostrum optio placeat praesentium quae quam qui quibusdam quidem quo quos repudiandae temporibus ullam vel velit voluptas voluptate voluptates voluptatibus. At debitis deleniti dolor dolorem et laudantium optio quisquam veritatis? Ad aperiam autem eos illo incidunt ipsum iusto minus mollitia odio porro sint, tenetur unde vel. Amet iste iure numquam praesentium quas. Aliquid amet culpa cum, dolorem hic molestiae molestias nemo quaerat quo repudiandae sunt suscipit. Dolore fugiat laudantium natus neque quam sequi voluptatum. Accusamus accusantium aliquam animi aspernatur deleniti deserunt, ducimus facilis harum impedit inventore laborum magnam nemo, nesciunt nisi non pariatur qui quia recusandae rem, repellendus rerum sapiente sed voluptatibus. Autem eligendi facere natus non perspiciatis recusandae, saepe sit voluptate. Aut corporis dolor, dolorem esse eveniet excepturi exercitationem fuga labore magnam minus molestias non obcaecati tempore totam velit veniam vero. Assumenda consequuntur hic libero nesciunt officia qui quisquam quos unde vitae.</p>
+  </div>
+</section>
+<section class="join-to-us">
+  <app-section-title
+    header="Dołącz do nas"
+    subHeader="Aplikuj już dziś"
+  ></app-section-title>
+  <app-hero-banner btnText="APLIKUJ"></app-hero-banner>
+
+
+</section>

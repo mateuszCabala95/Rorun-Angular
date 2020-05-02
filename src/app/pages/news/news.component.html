@@ -1,1 +1,46 @@
-<p>news works!</p>
+<app-banner
+  backgroundImagePath="assets/news/background_image.jpg"
+  header="Aktualności"
+  subHeader="sportowe"
+></app-banner>
+<section class="news">
+  <app-section-title
+    header="Aktualności"
+    subHeader="sprawdź co u nas słychać"
+    [extraDescription]="true"
+  ></app-section-title>
+
+  <div class="is-container">
+    <ng-container *ngFor="let n of news">
+      <a routerLink="/news/{{n.id}}">
+        <app-photo-card
+          [photo]="n.photo"
+          [name]="n.name"
+          [subtitle]="n.date.toLocaleDateString()"
+        >
+        </app-photo-card>
+      </a>
+    </ng-container>
+
+
+   <div class="more-data" [class.is-hidden]="!isOpenMore">
+     <ng-container *ngFor="let n of news">
+       <a routerLink="/news/{{n.id}}">
+         <app-photo-card
+           [photo]="n.photo"
+           [name]="n.name"
+           [subtitle]="n.date.toLocaleDateString()"
+         >
+         </app-photo-card>
+       </a>
+     </ng-container>
+   </div>
+
+    <button (click)="onOpenMore()">{{isOpenMore? 'mniej': 'więcej'}}</button>
+
+
+  </div>
+
+
+</section>
+

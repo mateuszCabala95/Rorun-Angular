@@ -1,1 +1,49 @@
-<p>news-chosen works!</p>
+<app-banner
+[backgroundImagePath]="bannerPath"
+[header]="header"
+[subHeader]="subHeader"
+></app-banner>
+
+<app-section-title
+[header]="newsTitle"
+[subHeader]="newsSubTitle"
+[extraDescription]="description"
+></app-section-title>
+
+<section class="news-description">
+  <div class="is-container">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci aliquid architecto aspernatur blanditiis et fugit incidunt labore magni natus odit, omnis pariatur porro quia quidem quisquam reiciendis rem, voluptas? A consectetur corporis, dolore dolorem eligendi et harum, iusto maiores molestias natus quam quidem saepe sequi sunt suscipit. Aut dignissimos eveniet, excepturi maxime non nulla odit placeat. Ipsam, nobis, voluptatibus! Molestias necessitatibus possimus quis quisquam saepe! Aspernatur consequatur corporis cum cumque dignissimos dolore doloremque eaque enim eos expedita facere ipsa, minus nulla odio odit possimus quae quam quis quos recusandae reprehenderit saepe, soluta suscipit tempora tempore ullam vitae voluptatum. Accusantium aliquam architecto at cum distinctio, hic ipsa nemo possimus quaerat quas. Animi expedita illo in ipsum minus nam, nihil pariatur quos rem repellendus? Alias dolore ea ipsa magni nesciunt optio praesentium sapiente similique tempora veritatis? A adipisci beatae cum cupiditate debitis ea error harum, illum impedit incidunt laboriosam maiores minima, mollitia praesentium provident quo sit sunt veniam voluptates voluptatum. Debitis earum eveniet facilis in laboriosam non veniam. Aut culpa deserunt, dolor eius incidunt inventore iure mollitia officia provident quaerat quia sint ut vel. Accusamus doloribus earum eius enim error explicabo id itaque magnam nihil, praesentium quisquam rerum sed velit! Tenetur!</p>
+
+
+    <div class="photo-container">
+      <ng-container *ngFor="let photo of newsPhotos">
+        <img [src]="photo.src" [alt]="photo.alt">
+      </ng-container>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci aliquid architecto aspernatur blanditiis et fugit incidunt labore magni natus odit, omnis pariatur porro quia quidem quisquam reiciendis rem, voluptas? A consectetur corporis, dolore dolorem eligendi et harum, iusto maiores molestias natus quam quidem saepe sequi sunt suscipit. Aut dignissimos eveniet, excepturi maxime non nulla odit placeat. Ipsam, nobis, voluptatibus! Molestias necessitatibus possimus quis quisquam saepe! Aspernatur consequatur corporis cum cumque dignissimos dolore doloremque eaque enim eos expedita facere ipsa, minus nulla odio odit possimus quae quam quis quos recusandae reprehenderit saepe, soluta suscipit tempora tempore ullam vitae voluptatum. Accusantium aliquam architecto at cum distinctio, hic ipsa nemo possimus quaerat quas. Animi expedita illo in ipsum minus nam, nihil pariatur quos rem repellendus? Alias dolore ea ipsa magni nesciunt optio praesentium sapiente similique tempora veritatis? A adipisci beatae cum cupiditate debitis ea error harum, illum impedit incidunt laboriosam maiores minima, mollitia praesentium provident quo sit sunt veniam voluptates voluptatum. Debitis earum eveniet facilis in laboriosam non veniam. Aut culpa deserunt, dolor eius incidunt inventore iure mollitia officia provident quaerat quia sint ut vel. Accusamus doloribus earum eius enim error explicabo id itaque magnam nihil, praesentium quisquam rerum sed velit! Tenetur!</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci aliquid architecto aspernatur blanditiis et fugit incidunt labore magni natus odit, omnis pariatur porro quia quidem quisquam reiciendis rem, voluptas? A consectetur corporis, dolore dolorem eligendi et harum, iusto maiores molestias natus quam quidem saepe sequi sunt suscipit. Aut dignissimos eveniet, excepturi maxime non nulla odit placeat. Ipsam, nobis, voluptatibus! Molestias necessitatibus possimus quis quisquam saepe! Aspernatur consequatur corporis cum cumque dignissimos dolore doloremque eaque enim eos expedita facere ipsa, minus nulla odio odit possimus quae quam quis quos recusandae reprehenderit saepe, soluta suscipit tempora tempore ullam vitae voluptatum. Accusantium aliquam architecto at cum distinctio, hic ipsa nemo possimus quaerat quas. Animi expedita illo in ipsum minus nam, nihil pariatur quos rem repellendus? Alias dolore ea ipsa magni nesciunt optio praesentium sapiente similique tempora veritatis? A adipisci beatae cum cupiditate debitis ea error harum, illum impedit incidunt laboriosam maiores minima, mollitia praesentium provident quo sit sunt veniam voluptates voluptatum. Debitis earum eveniet facilis in laboriosam non veniam. Aut culpa deserunt, dolor eius incidunt inventore iure mollitia officia provident quaerat quia sint ut vel. Accusamus doloribus earum eius enim error explicabo id itaque magnam nihil, praesentium quisquam rerum sed velit! Tenetur!</p>
+
+  </div>
+
+</section>
+
+<app-section-title
+header="Inne aktualności"
+subHeader="zobacz teraz"
+>
+</app-section-title>
+
+
+<div class="news">
+<ng-container *ngFor="let news of anotherNews.slice(0,3)">
+  <a routerLink="/news/{{news.id}}">
+    <app-photo-card
+    [photo]="news.photo"
+    [name]="news.name"
+    [subtitle]="news.date | date"
+    ></app-photo-card>
+  </a>
+</ng-container>
+</div>
